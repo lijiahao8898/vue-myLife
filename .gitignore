@@ -1,6 +1,11 @@
 # Build and Release Folders
 bin/
 bin-debug/
+node_modules/
+.DS_Store
+.idea/
+dist/
+package-lock.json
 bin-release/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin
