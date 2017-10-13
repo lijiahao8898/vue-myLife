@@ -1,29 +1,46 @@
 <template>
     <div class="header">
-        <p>{{name}}</p>
+        <ul>
+            <li v-for="item in list"><a href="#">{{ item.name }}</a></li>
+        </ul>
     </div>
 </template>
-
-<!--<style lang="scss" scoped="" type="text/scss">-->
-    <!--@import "../../style/common/header.scss";-->
-<!--</style>-->
 
 <script type="text/babel">
     export default {
         data () {
             return {
-                name: '李家豪'
+                list: [{
+                    name: "动漫"
+                },{
+                    name: "美剧"
+                },{
+                    name: "韩剧"
+                },{
+                    name: "日剧"
+                }]
             }
         }
     }
 </script>
 
-<style lang="scss" scoped="" type="text/scss">
+<style lang="scss" type="text/scss">
+    @import "../../style/common/global";
     .header{
-        background: #000;
-        p{
-            font-size: 24px;
-            color: #fff
+        background: $gray;
+        ul{
+            overflow: hidden;
+            li{
+                font-size: 12px;
+                list-style: none;
+                float: left;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 10px 5px;
+                    display: inline-block;
+                }
+            }
         }
     }
 </style>

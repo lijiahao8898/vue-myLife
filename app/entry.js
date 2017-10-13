@@ -2,6 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 
+// 默认css
+import 'styleScss/common/reset.css'
+
 // elementUI
 import './style/theme/index.css'
 // import 'element-ui/lib/theme-default/index.css'

@@ -1,11 +1,11 @@
 <template>
     <div>
+        <app-header></app-header>
         <router-link to="/home">home</router-link>
         <router-link to="/list">list</router-link>
         <router-view></router-view>
         <app-wrapper :show-info="isShowWrapper" v-on:ni-hao="alertNi">
             <!--<app-wrapper>-->
-            <app-header></app-header>
 
             <div class="container">
                 <Hello></Hello>
@@ -25,7 +25,6 @@
     import wrapper from 'vueView/common/app-wrapper.vue';
     import top from 'vueView/common/header.vue';
     import footer from 'vueView/common/footer.vue';
-    //import 'styleScss/common/common.css'
 
     let lo;
     export default {

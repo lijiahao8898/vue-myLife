@@ -14,6 +14,12 @@ npm install / sudo npm install
 npm start
 ```
 
+### packaging
+
+```
+npm run build
+```
+
 ### webpack
 
 plugin：
