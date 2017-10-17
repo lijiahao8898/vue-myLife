@@ -1,10 +1,9 @@
 <template>
     <el-row>
-        <img :src="img" class="image">
         <el-col :span="6" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 1 : 0">
             <el-card :body-style="{ padding: '0px'}">
                 <div style="padding: 14px;">
-                    <img :src="imgSrc" class="image">
+                    <img :src="img" class="image">
                     <span>好吃的汉堡</span>
                     <div class="bottom clearfix">
                         <time class="time">{{ currentDate }}</time>

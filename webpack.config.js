@@ -69,8 +69,12 @@ module.exports = {
                 }
             },
 
+            // {
+            //     test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+            //     loader: 'file-loader'
+            // },
             {
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+                test: /\.(woff|woff2|ttf|eot)$/,
                 loader: 'file-loader'
             },
             // 使用vue-loader 加载 .vue 结尾的文件
