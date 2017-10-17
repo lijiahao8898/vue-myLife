@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <p>{{ name }}</p>
+        <p>{{ copyright }}</p>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
     export default {
         data() {
             return {
-                name: '李家豪'
+                copyright: '杭州纷享汇电子商务有限公司提供技术支持'
             }
         }
     }
@@ -16,7 +16,10 @@
 
 <style lang="scss" scoped="" type="text/scss">
     .footer{
-        background: #ccc;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         p{
             text-align: center;
             font-size: 12px;

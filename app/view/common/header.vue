@@ -1,23 +1,35 @@
 <template>
     <div class="header">
         <ul>
-            <li v-for="item in list"><a href="#">{{ item.name }}</a></li>
+            <li v-for="item in list">
+                <router-link :to="item.link">{{item.name}}</router-link>
+            </li>
         </ul>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        data () {
+        data() {
             return {
                 list: [{
-                    name: "动漫"
+                    name: '主页',
+                    link: '/home'
+                }, {
+                    name: '列表',
+                    link: '/list'
                 },{
-                    name: "美剧"
-                },{
-                    name: "韩剧"
-                },{
-                    name: "日剧"
+                    name: "动漫",
+                    link: '/dongman'
+                }, {
+                    name: "美剧",
+                    link: '/meiju',
+                }, {
+                    name: "韩剧",
+                    link: '/hanju'
+                }, {
+                    name: "日剧",
+                    link: '/riju'
                 }]
             }
         }
@@ -26,19 +38,23 @@
 
 <style lang="scss" type="text/scss">
     @import "../../style/common/global";
-    .header{
+
+    .header {
         background: $gray;
-        ul{
+        ul {
             overflow: hidden;
-            li{
+            li {
                 font-size: 12px;
                 list-style: none;
                 float: left;
-                a{
+                a {
                     color: #fff;
                     text-decoration: none;
-                    padding: 10px 5px;
+                    padding: 10px;
                     display: inline-block;
+                }
+                a.router-link-active{
+                    color: $main-color;
                 }
             }
         }

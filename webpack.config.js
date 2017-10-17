@@ -62,8 +62,11 @@ module.exports = {
 
             // 图片转化，小于8K自动转化为base64的编码
             {
-                test: /\.(jpg|png)$/,
-                loader: "url?limit=8192"
+                test:  /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: "url-loader",
+                options: {
+                    limit: 8192
+                }
             },
 
             {

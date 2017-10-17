@@ -1,18 +1,19 @@
 <template>
-    <div>
+    <div v-if="completed">
+        <!-- app header -->
         <app-header></app-header>
-        <router-link to="/home">home</router-link>
-        <router-link to="/list">list</router-link>
-        <router-view></router-view>
-        <app-wrapper :show-info="isShowWrapper" v-on:ni-hao="alertNi">
-            <!--<app-wrapper>-->
 
-            <div class="container">
-                <Hello></Hello>
-                <todo></todo>
-            </div>
-            <app-footer></app-footer>
-        </app-wrapper>
+        <app-wrapper :show-info="wrapper"></app-wrapper>
+        <!--<app-wrapper v-on:ni-hao="alertNi">-->
+            <!--<div class="container">-->
+                <!--<Hello></Hello>-->
+                <!--<todo></todo>-->
+            <!--</div>-->
+        <!--</app-wrapper>-->
+
+        <!-- app footer -->
+        <card></card>
+        <app-footer></app-footer>
     </div>
 </template>
 
@@ -22,37 +23,41 @@
     import Hello from 'vueView/hello';
     import todo from 'vueView/todo.vue';
     // 公共组件
-    import wrapper from 'vueView/common/app-wrapper.vue';
     import top from 'vueView/common/header.vue';
+    import wrapper from 'vueView/common/app-wrapper.vue';
     import footer from 'vueView/common/footer.vue';
+    import card from 'vueView/component/card.vue'
 
-    let lo;
+    let loading;
     export default {
         data () {
             return {
-                isShowWrapper: false
+                wrapper: false,
+                completed: false
             }
         },
         created: () => {
-            lo = Vue.prototype.$loading({text: '死命加载中...'});
+            loading = Vue.prototype.$loading({text: '玩命加载中>.<...'});
         },
         mounted: function () {
-            this.loadingClose();
+            this.clear();
         },
         components: {
             'app-header': top,
             'app-footer': footer,
             'app-wrapper': wrapper,
             'Hello': Hello,
-            'todo': todo
+            'todo': todo,
+            'card': card
         },
         methods: {
-            loadingClose: function () {
+            clear: function () {
                 let that = this;
                 setTimeout(function () {
-                    lo.close();
-                    that.isShowWrapper = true;
-                }, 1000);
+                    loading.close();
+                    that.completed = true;
+                    that.wrapper = true;
+                }, 800);
             },
             alertNi: function (d) {
                 console.log('d:' + d.name);

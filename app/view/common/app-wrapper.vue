@@ -1,6 +1,6 @@
 <template>
     <div class="app-wrapper" v-show="showInfo" @click="alertHi">
-        <div>12456</div>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -25,8 +25,11 @@
     }
 </script>
 
-<!--<style lang="scss" scoped="" type="text/scss">-->
-    <!--.app-wrapper{-->
-        <!--display: none;-->
-    <!--}-->
-<!--</style>-->
+<style lang="scss" scoped="" type="text/scss">
+    .app-wrapper{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* padding-top: 15px; */
+        width: 980px;
+        margin: 15px auto 0 auto;
+    }
+</style>
