@@ -1,12 +1,16 @@
 <template>
     <div class="app-wrapper" v-show="showInfo" @click="alertHi">
+        {{ userName }}
         <router-view></router-view>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        props: ['showInfo'],
+        props: [
+            'showInfo',
+            'userName'
+        ],
 
         data() {
             return {

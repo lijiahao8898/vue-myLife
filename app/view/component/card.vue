@@ -1,13 +1,13 @@
 <template>
     <el-row>
-        <el-col :span="6" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 1 : 0">
+        <el-col :span="6" v-for="(o, index) in 20" :key="o" :offset="index >= 0 ? 1 : 0" class="cards">
             <el-card :body-style="{ padding: '0px'}">
                 <div style="padding: 14px;">
                     <img :src="img" class="image">
                     <span>好吃的汉堡</span>
                     <div class="bottom clearfix">
                         <time class="time">{{ currentDate }}</time>
-                        <el-button type="text" class="button">操作按钮</el-button>
+                        <!--<el-button type="text" class="button">操作按钮</el-button>-->
                     </div>
                 </div>
             </el-card>
@@ -28,6 +28,9 @@
 </script>
 
 <style lang="scss" type="text/scss" scoped="">
+    .cards{
+        margin-top: 10px;
+    }
     .time {
         font-size: 13px;
         color: #999;

@@ -3,7 +3,7 @@
         <!-- app header -->
         <app-header></app-header>
 
-        <app-wrapper :show-info="wrapper"></app-wrapper>
+        <app-wrapper :show-info="wrapper" :user-name="userName" v-on:ni-hao="alertNi"></app-wrapper>
         <!--<app-wrapper v-on:ni-hao="alertNi">-->
             <!--<div class="container">-->
                 <!--<Hello></Hello>-->
@@ -12,7 +12,6 @@
         <!--</app-wrapper>-->
 
         <!-- app footer -->
-        <card></card>
         <app-footer></app-footer>
     </div>
 </template>
@@ -33,7 +32,8 @@
         data () {
             return {
                 wrapper: false,
-                completed: false
+                completed: false,
+                userName: '李家豪'
             }
         },
         created: () => {
@@ -47,8 +47,7 @@
             'app-footer': footer,
             'app-wrapper': wrapper,
             'Hello': Hello,
-            'todo': todo,
-            'card': card
+            'todo': todo
         },
         methods: {
             clear: function () {
@@ -60,8 +59,8 @@
                 }, 800);
             },
             alertNi: function (d) {
-                console.log('d:' + d.name);
-                alert('我是父组件，你好');
+                console.log('名字' + d.name + '年龄：' + d.age);
+                alert('我是父组件，你好。收到你的名字' + d.name + '年龄：' + d.age);
             }
         }
     }
