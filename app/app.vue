@@ -3,7 +3,7 @@
         <!-- app header -->
         <app-header></app-header>
 
-        <app-wrapper :show-info="wrapper" :user-name="userName" v-on:ni-hao="alertNi"></app-wrapper>
+        <app-wrapper :show-info="wrapper" :user-name="userName"></app-wrapper>
         <!--<app-wrapper v-on:ni-hao="alertNi">-->
             <!--<div class="container">-->
                 <!--<Hello></Hello>-->

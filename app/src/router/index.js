@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import home from 'vueView/home.vue';
 import list from 'vueView/list.vue';
+import simpleDrap from 'vueView/simple-drap.vue'
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,9 @@ const router = new VueRouter({
     },{
         path: '/list',
         component: list
+    },{
+        path: '/simple-drap',
+        component: simpleDrap
     }]
 });
 

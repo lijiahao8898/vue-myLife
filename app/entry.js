@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import router from './src/router/'
+import Vddl from 'vddl';
 
 // 默认css
 import 'styleScss/common/reset.css'
@@ -17,6 +18,7 @@ Vue.use(ElementUI);
 Vue.use(Radio);
 Vue.use(Loading.directive);
 Vue.use(Vuex);
+Vue.use(Vddl);
 
 // loading
 Vue.prototype.$loading = Loading.service;

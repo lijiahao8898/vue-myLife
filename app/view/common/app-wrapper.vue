@@ -1,6 +1,6 @@
 <template>
     <div class="app-wrapper" v-show="showInfo" @click="alertHi">
-        {{ userName }}
+        <p>{{ userName }}</p>
         <router-view></router-view>
     </div>
 </template>
@@ -35,5 +35,10 @@
         /* padding-top: 15px; */
         width: 980px;
         margin: 15px auto 0 auto;
+        p{
+            text-align: center;
+            font-size: 16px;
+            padding: 20px;
+        }
     }
 </style>

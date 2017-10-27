@@ -54,6 +54,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "element-ui": "^1.4.4"
+    "element-ui": "^1.4.4",
+    "vddl": "^0.5.3"
   }
 }

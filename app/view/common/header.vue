@@ -19,17 +19,20 @@
                     name: '列表',
                     link: '/list'
                 },{
-                    name: "动漫",
+                    name: '动漫',
                     link: '/dongman'
                 }, {
-                    name: "美剧",
+                    name: '美剧',
                     link: '/meiju',
                 }, {
-                    name: "韩剧",
+                    name: '韩剧',
                     link: '/hanju'
                 }, {
-                    name: "日剧",
+                    name: '日剧',
                     link: '/riju'
+                }, {
+                    name: 'vue拖拽功能',
+                    link: '/simple-drap'
                 }]
             }
         }
