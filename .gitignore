@@ -4,7 +4,6 @@ bin-debug/
 node_modules/
 .DS_Store
 .idea/
-dist/
 bin-release/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin

@@ -4,12 +4,6 @@
         <app-header></app-header>
 
         <app-wrapper :show-info="wrapper" :user-name="userName" v-on:ni-hao="alertNi"></app-wrapper>
-        <!--<app-wrapper v-on:ni-hao="alertNi">-->
-            <!--<div class="container">-->
-                <!--<Hello></Hello>-->
-                <!--<todo></todo>-->
-            <!--</div>-->
-        <!--</app-wrapper>-->
 
         <!-- app footer -->
         <app-footer></app-footer>
